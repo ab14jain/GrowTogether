@@ -8,7 +8,7 @@ class Solution:
            return False
         
         factors = self.getFactors(n)
-
+        print(factors)
         for i in factors:
             if i > 5 and self.isPrime(i):
                 return False
@@ -35,7 +35,8 @@ class Solution:
 
         factors = list(set(factors)) 
 
+        
         return factors
 
 s= Solution()
-print(s.isUgly(6))  # True
+print(s.isUgly(14))  # True
