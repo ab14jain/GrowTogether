@@ -25,7 +25,7 @@ class Solution:
     
 
 s=Solution()
-print(s.countBadPairs([4,5,10,2,3,1])) # 13
-print(s.countBadPairs([4,1,3,3])) # 5
-print(s.countBadPairs([3,3,3,3])) # 6
+# print(s.countBadPairs([4,5,10,2,3,1])) # 13
+# print(s.countBadPairs([4,1,3,3])) # 5
+# print(s.countBadPairs([3,3,3,3])) # 6
 print(s.countBadPairs([1,2,3,4,5])) # 10
