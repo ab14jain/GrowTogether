@@ -1,3 +1,8 @@
+#Intution
+# 1. Create a dictionary to store the index of the numbers
+# 2. Loop through the list of numbers
+# 3. Find the difference between the target and the number
+
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         counter_nums = {}
