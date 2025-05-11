@@ -1,10 +1,43 @@
 #https://www.scaler.com/academy/mentee-dashboard/class/325296/assignment/problems/4107?navref=cl_tt_nv
-import math
+
+
+from math import ceil, sqrt
+
 
 class Solution:
     # @param A : list of integers
     # @return a list of integers
     def solve(self, A):
+
+        big_int = 1000005
+        spf = [1]*big_int
+
+        for i in range(1, big_int):
+            spf[i] = i
+
+        sqrt_val = ceil(sqrt(big_int))
+        for i in range(2,sqrt_val+1):
+            for j in range(i*i,big_int, i):
+                if spf[j] == j:
+                    spf[j] = i
+
+        n = len(A)
+        res = []
+        for i in range(n):
+            temp = A[i]
+            ans = 1
+
+            while temp != 1:
+                count = 1
+                d = spf[temp]
+                while temp != 1 and temp%d == 0:
+                    count += 1
+                    temp //= d
+
+                ans *= count
+            
+            res.append(ans)
+        return res
 
         # n = len(A)
         # if n == 1 and A[0] == 1:
@@ -28,49 +61,160 @@ class Solution:
         
         # return ans
 
-        def calc_smallest_prime_factor(num):
-            large_num = min(1000000,num)
-            smallest_prime_factor = [0]*large_num
+        # def calc_smallest_prime_factor(num):
+        #     large_num = min(1000000,num)
+        #     smallest_prime_factor = [0]*large_num
 
-            for i in range(1,large_num):
-                smallest_prime_factor[i] = i
+        #     for i in range(1,large_num):
+        #         smallest_prime_factor[i] = i
             
-            for i in range(2,math.ceil(math.sqrt(large_num))):
-                for j in range(i*i,large_num,i):
-                    if smallest_prime_factor[j] == j:
-                        smallest_prime_factor[j] = i  
+        #     for i in range(2,math.ceil(math.sqrt(large_num))):
+        #         for j in range(i*i,large_num,i):
+        #             if smallest_prime_factor[j] == j:
+        #                 smallest_prime_factor[j] = i  
             
-            return smallest_prime_factor
+        #     return smallest_prime_factor
 
-        result = []
-        a_size = len(A)
-        max_A = max(A)
+        # result = []
+        # a_size = len(A)
+        # max_A = max(A)
         
-        if max_A < 100000:
-            smallest_prime_factor = calc_smallest_prime_factor(max_A+1)
-        else:
-            smallest_prime_factor = calc_smallest_prime_factor(1000000)
+        # if max_A < 100000:
+        #     smallest_prime_factor = calc_smallest_prime_factor(max_A+1)
+        # else:
+        #     smallest_prime_factor = calc_smallest_prime_factor(1000000)
         
-        for i in range(a_size):
-            temp = A[i]
-            ans = 1
-            while temp != 1:
-                cnt = 1
-                d = smallest_prime_factor[temp]
-                while temp != 1 and temp % d == 0:
-                    cnt += 1
-                    temp //= d
+        # for i in range(a_size):
+        #     temp = A[i]
+        #     ans = 1
+        #     while temp != 1:
+        #         cnt = 1
+        #         d = smallest_prime_factor[temp]
+        #         while temp != 1 and temp % d == 0:
+        #             cnt += 1
+        #             temp //= d
                 
-                ans *= cnt
+        #         ans *= cnt
             
-            result.append(ans)
+        #     result.append(ans)
 
-        return result
+        # return result
+
+        # def SieveOfEratosthenes(n, prime,primesquare, a): 
+        #     # Create a boolean array "prime[0..n]"  
+        #     # and initialize all entries it as  
+        #     # true. A value in prime[i] will finally  
+        #     # be false if i is not a prime, else true. 
+        #     for i in range(2,n+1): 
+        #         prime[i] = True
+        
+        #     # Create a boolean array "primesquare[0..n*n+1]" 
+        #     # and initialize all entries it as false.  
+        #     # A value in squareprime[i] will finally be  
+        #     # true if i is square of prime, else false. 
+        #     for i in range((n * n + 1)+1): 
+        #         primesquare[i] = False
+        
+        #     # 1 is not a prime number 
+        #     prime[1] = False
+        
+        #     p = 2
+        #     while(p * p <= n): 
+        #         # If prime[p] is not changed,  
+        #         # then it is a prime 
+        #         if (prime[p] == True): 
+        #             # Update all multiples of p 
+        #             i = p * 2 
+        #             while(i <= n): 
+        #                 prime[i] = False
+        #                 i += p 
+        #         p+=1
+            
+        
+        #     j = 0
+        #     for p in range(2,n+1):  
+        #         if (prime[p]==True):  
+        #             # Storing primes in an array 
+        #             a[j] = p 
+        
+        #             # Update value in primesquare[p*p], 
+        #             # if p is prime. 
+        #             primesquare[p * p] = True
+        #             j+=1
+        
+        # # Function to count divisors 
+        # def countDivisors(n): 
+        #     # If number is 1, then it will 
+        #     # have only 1 as a factor. So, 
+        #     # total factors will be 1. 
+        #     if (n == 1): 
+        #         return 1
+        
+        #     prime = [False]*(n + 2) 
+        #     primesquare = [False]*(n * n + 2) 
+            
+        #     # for storing primes upto n 
+        #     a = [0]*n 
+        
+        #     # Calling SieveOfEratosthenes to  
+        #     # store prime factors of n and to  
+        #     # store square of prime factors of n 
+        #     SieveOfEratosthenes(n, prime, primesquare, a) 
+        
+        #     # ans will contain total 
+        #     # number of distinct divisors 
+        #     ans = 1
+        
+        #     # Loop for counting factors of n 
+        #     i=0
+        #     while(1):  
+        #         # a[i] is not less than cube root n 
+        #         if(a[i] * a[i] * a[i] > n): 
+        #             break
+        
+        #         # Calculating power of a[i] in n. 
+        #         cnt = 1 # cnt is power of  
+        #                 # prime a[i] in n. 
+        #         while (n % a[i] == 0): # if a[i] is a factor of n 
+        #             n = n / a[i] 
+        #             cnt = cnt + 1 # incrementing power 
+        
+        #         # Calculating number of divisors 
+        #         # If n = a^p * b^q then total  
+        #         # divisors of n are (p+1)*(q+1) 
+        #         ans = ans * cnt 
+        #         i+=1
+        
+        #     # if a[i] is greater than 
+        #     # cube root of n 
+            
+        #     n=int(n) 
+        #     # First case 
+        #     if (prime[n]==True): 
+        #         ans = ans * 2
+        
+        #     # Second case 
+        #     elif (primesquare[n]==True): 
+        #         ans = ans * 3
+        
+        #     # Third case 
+        #     elif (n != 1): 
+        #         ans = ans * 4
+        
+        #     return ans # Total divisors 
+        
+        # res = []
+        # n = len(A)
+        # for i in range(n):
+        #     res.append(countDivisors(A[i]))
+
+        # return res
 
 
 s=Solution()
 print(s.solve([97,100,120,34,56,64]))
 print(s.solve([100000]))
+print(s.solve([1000000]))
 print(s.solve([210000]))
 print(s.solve([2,3,4,5]))
 print(s.solve([8,9,10]))
@@ -80,6 +224,6 @@ str = "2 8 2 48 4 8 48 16 4 2 8 16 4 12 48 32 4 4 24 8 24 2 4 8 6 32 48 16 8 2 1
 
 news = list(map(int, str.split(" ")))
 count = len(news)
-# print(count)
+#print(count)
 
-# print(s.solve(news))
+print(s.solve(news))
