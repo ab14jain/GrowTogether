@@ -152,6 +152,6 @@ where title = 'adventure trip';
 
 -- -> Index lookup on film using idx_title (title='adventure trip')  (cost=0.35 rows=1) (actual time=0.0187..0.0187 rows=0 loops=1)
  
- 
+ show variables like 'autocommit';
  
  
