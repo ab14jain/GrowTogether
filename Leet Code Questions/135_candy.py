@@ -18,6 +18,7 @@ class Solution:
         return sum(candies)
 
 s=Solution()
-print(s.candy([1,0,2]))
-print(s.candy([1,2,2]))
+print(s.candy([1,3,2,2,1]))
+# print(s.candy([1,0,2]))
+# print(s.candy([1,2,2]))
 
