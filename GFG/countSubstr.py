@@ -7,6 +7,8 @@ class Solution:
 
         # Approach 1 - Brute Force 
         # TLE => 1010 /1117
+        # Time Complexity	O(n³)
+        # Space Complexity	O(k)
  
         # n = len(s)
         # count = 0
@@ -20,6 +22,8 @@ class Solution:
 
         # Approach 2 - Optmized with hashmap
         # TLE => 1010 /1117
+        # Time Complexity	O(n²)
+        # Space Complexity	O(k)
  
         n = len(s)
         count = 0
