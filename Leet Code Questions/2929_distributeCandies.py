@@ -3,7 +3,12 @@ class Solution:
 
 
         ways = 0
-        def recur():
+        count = [0]
+        def recur(candies, rem_candies, limit, count):
 
-
+            if rem_candies == 0
+                return
             
+            
+
+
