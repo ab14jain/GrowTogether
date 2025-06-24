@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5f7cf286-cfee-4f46-98a7-010a7613f1f8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Assignment Code/mysql/issue tracker scripts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Assignment Code/mysql/issue tracker scripts.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../NextJS/issue-tracker/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../../../NextJS/issue-tracker/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../NextJS/issue-tracker/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../NextJS/issue-tracker/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../NextJS/issue-tracker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../NextJS/issue-tracker/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../NextJS/issue-tracker/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/../../../NextJS/issue-tracker/prisma/schema.prisma" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2xjWdk1UUveRkvjt0TsJMfYVBxm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Client.executor": "Run",
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "onboarding.tips.debug.path": "D:/Personal/GrowTogether/Scaler/LLD/OPPsConcept/src/Main.java"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="constructors.Client" />
+      <module name="OPPsConcept" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="constructors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f7cf286-cfee-4f46-98a7-010a7613f1f8" name="Changes" comment="" />
+      <created>1748452053843</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748452053843</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/constructors/Client.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/constructors/Client.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/constructors/Client.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
