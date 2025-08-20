@@ -16,7 +16,7 @@ class Solution:
         #Method 2 - binary Search
         #TC - nlogn
         #SC - n
-
+        #Optmized
         n = len(arr)
         res = [-1]*n
         suff = arr.copy()
