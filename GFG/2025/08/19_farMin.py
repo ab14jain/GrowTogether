@@ -2,48 +2,48 @@ class Solution:
     def farMin(self, arr):
         # Code Here
         #Method 1: Brute force:
-        n = len(arr)
-        ans = [-1]*n
-        for i in range(n):
-            for j in range(i+1, n):
+        # n = len(arr)
+        # ans = [-1]*n
+        # for i in range(n):
+        #     for j in range(i+1, n):
                 
-                if arr[i] > arr[j]:
-                    ans[i] = j
+        #         if arr[i] > arr[j]:
+        #             ans[i] = j
 
-        return ans
+        # return ans
 
 
         #Method 2 - binary Search
         #TC - nlogn
         #SC - n
 
-        # n = len(arr)
-        # res = [-1]*n
-        # suff = arr.copy()
-        # suff[n - 1] = arr[n - 1]
-        # for i in range(n - 2, -1, -1):
-        #     suff[i] = min(arr[i], suff[i + 1])
+        n = len(arr)
+        res = [-1]*n
+        suff = arr.copy()
+        suff[n - 1] = arr[n - 1]
+        for i in range(n - 2, -1, -1):
+            suff[i] = min(arr[i], suff[i + 1])
         
         
 
-        # for i in range(n):
+        for i in range(n):
 
-        #     l = i+1
-        #     h = n-1
-        #     ans = -1
+            l = i+1
+            h = n-1
+            ans = -1
 
-        #     while l <= h:
-        #         mid = (l+h)//2
+            while l <= h:
+                mid = (l+h)//2
 
-        #         if suff[mid] < arr[i]:
-        #             ans = mid
-        #             l = mid + 1
-        #         else:
-        #             h = mid - 1
+                if suff[mid] < arr[i]:
+                    ans = mid
+                    l = mid + 1
+                else:
+                    h = mid - 1
             
-        #     res[i] = ans
+            res[i] = ans
 
-        # return res
+        return res
 
         # n = len(arr)
         # res = [-1] * n
